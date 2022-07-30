@@ -1,7 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import styles from "./Home.module.css";
-import Cards from "./Cards";
+import Cards from "../Cards/Cards";
 export default function Home() {
   return (
     <div className={styles.bghome}>

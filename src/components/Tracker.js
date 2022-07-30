@@ -1,7 +1,7 @@
 import React from "react";
-import Animation from "./Animation";
-import Navbar from "./Navbar";
-import "./styles.css";
+import Animation from "./Animation/Animation";
+import Navbar from "./Navbar/Navbar";
+
 function Tracker() {
   return (
     <div className="tracker">

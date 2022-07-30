@@ -1,0 +1,28 @@
+.tableBackground {
+  background: #2a2b2f;
+}
+.container {
+  padding-bottom: 50px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 1.5rem;
+}
+.h1 {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 1.8rem;
+  padding-bottom: 0.3rem;
+}
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+.tableContainer2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 353px;
+}

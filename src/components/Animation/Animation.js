@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./Animation.css";
 import Particles from "react-tsparticles";
 
 export default function Animation() {

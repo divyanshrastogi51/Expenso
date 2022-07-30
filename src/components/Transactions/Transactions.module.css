@@ -1,0 +1,34 @@
+.container {
+  text-align: center;
+  background: #232427;
+  color: white;
+  min-height: 100vh;
+  padding: 5rem;
+  padding-top: 2.5rem;
+}
+
+.container2 {
+  background: #232427;
+  width: 100%;
+  min-height: calc(100vh - 10rem);
+  color: black;
+  padding: 2rem;
+}
+
+.containerHeader {
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+}
+
+.headerText {
+  color: #087A84;
+}
+
+.formDisplay {
+  display: flex;
+  justify-content: space-around;
+}
+
