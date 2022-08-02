@@ -78,7 +78,7 @@ const Transactions = ({
                 onChange={(e) => setAmount(e.target.value)}
                 placeholder="Enter Amount"
               />
-              <Button variant="primary" type="submit">
+              <Button className="px-3" variant="primary" type="submit">
                 Add
               </Button>
             </div>

@@ -1,6 +1,6 @@
 import "./App.css";
-import { useState } from "react";
-import Tracker from "./components/Tracker";
+import { useState, useEffect } from "react";
+import Tracker from "./components/Tracker/Tracker";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -8,8 +8,13 @@ import ExpenseSettlement from "./components/ExpenseSettlement/ExpenseSettlement"
 import Transactions from "./components/Transactions/Transactions";
 import PersonExpense from "./classes/expense";
 import { minCashFlow } from "./utils/minCashFlow";
+import formatAmount from "./utils/formatAmount";
+import formatDate from "./utils/formatDate";
+import useStateWithLocalStorage from "./utils/useStateWithLocalStorage";
+import Entry from "./classes/Entry";
 const App = () => {
   // First Setting Up all the States
+  // Settlement States
   const [name, setName] = useState("");
   const [allNames, setAllNames] = useState([]);
   const [payer, setPayer] = useState("Choose Payer");
@@ -23,6 +28,11 @@ const App = () => {
   const [chartData, setChartData] = useState({});
   const [graphConfig, setGraphConfig] = useState({});
   const [outputGraphData, setOutputGraphData] = useState({});
+  // Tracker States
+  const [expenses, setExpenses] = useStateWithLocalStorage("expenses");
+  const [income, setIncome] = useStateWithLocalStorage("income");
+  const [budget, setBudget] = useState(0);
+  const [isNegative, setIsNegative] = useState(false);
   // Defining methods
   const addParticipant = () => {
     setAllNames((previous) => [...previous, { name }]);
@@ -97,6 +107,41 @@ const App = () => {
       links: generateOutputLinks(output),
     });
   };
+  const addEntry = (type, title, amount, category) => {
+    const newEntry = new Entry(
+      Date.now(),
+      formatDate(new Date()),
+      amount,
+      title,
+      category
+    );
+
+    if (type === "Expense") {
+      setExpenses([...expenses, newEntry]);
+    } else if (type === "Income") {
+      setIncome([...income, newEntry]);
+    }
+  };
+
+  const deleteEntry = (id, type) => {
+    if (type === "Expense") {
+      setExpenses([...expenses.filter((elem) => elem.id !== id)]);
+    } else if (type === "Income") {
+      setIncome([...income.filter((elem) => elem.id !== id)]);
+    }
+  };
+
+  const calculateBudget = () => {
+    let sum = 0;
+    expenses.forEach((elem) => (sum -= parseFloat(elem.amount)));
+    income.forEach((elem) => (sum += parseFloat(elem.amount)));
+    setBudget(formatAmount(sum));
+    setIsNegative(sum >= 0 ? false : true);
+  };
+
+  useEffect(() => {
+    calculateBudget();
+  }, [expenses, income]);
   return (
     <div className="App">
       <Router>
@@ -104,7 +149,19 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/track" element={<Tracker />} />
+          <Route
+            path="/track"
+            element={
+              <Tracker
+                income={income}
+                expenses={expenses}
+                budget={budget}
+                isNegative={isNegative}
+                deleteEntry={deleteEntry}
+                addEntry={addEntry}
+              />
+            }
+          />
           <Route
             exact
             path="/settle"

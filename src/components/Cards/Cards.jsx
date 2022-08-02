@@ -1,5 +1,3 @@
-//import styles from "./home.module.css";
-import React from "react";
 import styles from "./Cards.module.css";
 import { NavLink } from "react-router-dom";
 export default function Cards() {
@@ -11,12 +9,13 @@ export default function Cards() {
             <div className={styles.box}>
               <div className={styles.content}>
                 <h2>01</h2>
-                <h3>Card One</h3>
+                <h3>Expense Tracker</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  Tool to track your daily expenses and income so you can
+                  flexibly plan your budget to stay in control and achieve your
+                  goals.
                 </p>
-                <NavLink to="/settle">Expense Settelment</NavLink>
+                <NavLink to="/track">Expense Tracker</NavLink>
               </div>
             </div>
           </div>
@@ -24,12 +23,12 @@ export default function Cards() {
             <div className={styles.box}>
               <div className={styles.content}>
                 <h2>02</h2>
-                <h3>Card Two</h3>
+                <h3>Expense Settlement</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  Tool for friends and roommates to track bills and other shared
+                  expenses, so that everyone can settle each other’s payments.
                 </p>
-                <NavLink to="/track">Expense Tracker</NavLink>
+                <NavLink to="/settle">Expense Settlement</NavLink>
               </div>
             </div>
           </div>

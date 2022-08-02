@@ -7,7 +7,7 @@ const PeopleContainer = ({ allNames }) => {
     <div className="container">
       <h3 className={styles.heading}>Group Members</h3>
       {allNames.map((item, index) => (
-        <h4 className={styles.heading} key={index}>
+        <h4 className={styles.nameColor} key={index}>
           {item.name}
         </h4>
       ))}

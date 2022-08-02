@@ -1,0 +1,45 @@
+.Form {
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #253038;
+}
+.Error {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}
+.FormSection {
+  margin: 10px 0;
+}
+.InputContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.InputContainer_input {
+  margin: 5px 0;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+  outline: none;
+}
+.Label {
+  font-weight: bold;
+}
+.RadioContainer_radio {
+  margin: 10px;
+  outline: none;
+}
+.SelectContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.SelectContainer_select {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}

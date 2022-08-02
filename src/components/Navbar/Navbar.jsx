@@ -10,7 +10,7 @@ function Navbar() {
     <header className="main-header">
       <a href="/" className="brand-logo">
         <div className="brand-logo-name">
-          <h1>Logo</h1>
+          <h1>Expenso</h1>
         </div>
       </a>
       <div href="#" className="toggle-button" onClick={Click}>
@@ -20,9 +20,6 @@ function Navbar() {
       </div>
       <nav className="main-nav">
         <ul>
-          <li>
-            <a href="/about">About</a>
-          </li>
           <li>
             <a href="/settle">Expense Settlement</a>
           </li>

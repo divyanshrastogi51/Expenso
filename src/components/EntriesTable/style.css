@@ -1,0 +1,21 @@
+.EntriesTable {
+  margin: 15px;
+}
+
+.EntriesTable_header {
+  line-height: 50px;
+}
+.TableHeader {
+  background-color: #171f24;
+}
+
+.TableHeader_cell {
+  padding: 7px;
+}
+.Entry {
+  background-color: #253038;
+}
+
+.Entry_cell {
+  padding: 5px;
+}

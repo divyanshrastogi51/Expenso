@@ -1,9 +1,11 @@
-.container{
-  margin-top:10px;
+.container {
+  margin-top: 10px;
 }
 .heading {
   margin-top: 10px;
   padding-top: 10px;
-  color: #087A84;
+  color: white;
 }
-
+.nameColor {
+  color: rgb(148, 235, 240);
+}

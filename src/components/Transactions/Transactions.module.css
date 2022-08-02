@@ -17,6 +17,7 @@
 
 .containerHeader {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .list {
@@ -24,11 +25,10 @@
 }
 
 .headerText {
-  color: #087A84;
+  color: white;
 }
 
 .formDisplay {
   display: flex;
   justify-content: space-around;
 }
-

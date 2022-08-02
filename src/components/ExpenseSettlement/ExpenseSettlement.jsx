@@ -11,8 +11,7 @@ const ExpenseSettlement = ({ name, setName, allNames, addParticipant }) => {
           <h2 className={styles.headerText}>
             Enter Names Of People In The Group
           </h2>
-
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="my-3" controlId="formBasicEmail">
             <Form.Control
               type="text"
               value={name}
@@ -20,7 +19,7 @@ const ExpenseSettlement = ({ name, setName, allNames, addParticipant }) => {
               placeholder="John Doe"
             />
           </Form.Group>
-          <Button variant="primary" onClick={addParticipant}>
+          <Button variant="primary" onClick={addParticipant} className="px-3">
             Submit
           </Button>
         </div>

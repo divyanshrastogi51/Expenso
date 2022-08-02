@@ -6,6 +6,41 @@
   font-family: sans-serif;
   text-align: center;
   width: 100%;
-    position: absolute;
+  position: absolute;
 }
 
+.App_section {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.TrackerContainer {
+  width: auto;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #232427;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+.App_balance {
+  width: 300px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 975px) {
+  .App_section {
+    flex-direction: column;
+  }
+
+  .App_section--aligned {
+    align-items: center;
+  }
+}

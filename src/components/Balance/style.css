@@ -1,0 +1,21 @@
+.balance {
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: #485460;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.balanceLabel {
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
+.balanceValue {
+  font-size: 32px;
+  font-weight: bold;
+}

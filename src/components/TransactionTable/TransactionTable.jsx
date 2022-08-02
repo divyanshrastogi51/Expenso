@@ -20,7 +20,11 @@ const TransactionTable = ({
         {!flag && <h1 className={styles.h1}>Settled Transactions</h1>}
         <div className={styles.buttonContainer}>
           {outputList && outputList.length === 0 && (
-            <Button variant="primary" onClick={splitwiseTransactions}>
+            <Button
+              className="px-4"
+              variant="primary"
+              onClick={splitwiseTransactions}
+            >
               Simplify Transactions
             </Button>
           )}

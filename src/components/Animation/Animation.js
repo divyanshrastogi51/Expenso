@@ -1,3 +1,4 @@
+// This components is not used anywhere. But It provides a good animation
 import "./Animation.css";
 import Particles from "react-tsparticles";
 
