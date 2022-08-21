@@ -2,7 +2,7 @@ import styles from "./ExpenseSettlement.module.css";
 import PeopleContainer from "../People/PeopleContainer";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-// import Chart2 from "../Chart/Charts2";
+
 const ExpenseSettlement = ({ name, setName, allNames, addParticipant }) => {
   return (
     <div className={styles.container}>
@@ -17,6 +17,7 @@ const ExpenseSettlement = ({ name, setName, allNames, addParticipant }) => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="John Doe"
+              required
             />
           </Form.Group>
           <Button variant="primary" onClick={addParticipant} className="px-3">
@@ -27,7 +28,6 @@ const ExpenseSettlement = ({ name, setName, allNames, addParticipant }) => {
           <PeopleContainer allNames={allNames} />
         )}
       </div>
-      {/* <Chart2 /> */}
     </div>
   );
 };
